@@ -375,6 +375,7 @@ public class IonicDeploy extends CordovaPlugin {
     JSONObject json = new JSONObject();
 
     try {
+      json.put("app_id", this.app_id);
       json.put("deploy_uuid", this.getUUID());
       json.put("channel", this.channel);
       json.put("binary_version", this.deconstructVersionLabel(this.version_label)[0]);
